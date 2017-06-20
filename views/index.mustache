@@ -1,1 +1,29 @@
-<h1>{{value}}</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Directory</title>
+  </head>
+  <body>
+    <div class="index">
+      <h3>Index</h3>
+      {{#users}}
+      <div class="user-index" style = "border: 1px solid">
+        <img src={{avatar}} alt="">
+        <h3>{{name}}</h3>
+        {{#job}}
+        <p>{{job}}, {{company}}</p>
+        {{/job}}
+        {{^job}}
+        <p style = "color: red">Available for hire</p>
+        {{/job}}
+      </div>
+      {{/users}}
+    </div>
+    {{#users}}
+    <div class="user-card" id={{id}} style = "border: 1px solid red">
+      <p>{{name}}</p>
+    </div>
+    {{/users}}
+  </body>
+</html>

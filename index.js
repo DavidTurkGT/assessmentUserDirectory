@@ -10,15 +10,11 @@ app.set("views", "./views");
 app.set("view engine", "mustache");
 
 app.get("/",function(req, res){
-  res.render("index",
-  {
-    value: "Hello There!"
-  }
-  );
+  res.send("Please visit /directory");
 });
 
 app.get("/directory", function(req, res){
-
+  res.render("index", data);
 });
 
 app.listen(3000,function(){
