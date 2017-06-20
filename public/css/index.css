@@ -13,7 +13,7 @@
 }
 
 .user-index {
-    flex: 1 22%;
+    flex: 0 1 22%;
     margin: 0.75rem;
     padding: 0 1rem;
     border: 1px solid #E6E6E6;
@@ -26,4 +26,45 @@ a {
 
 a: visited{
   color: #367CD6;
+}
+
+.user-card{
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+}
+
+.user-card img{
+  border-radius: 100%;
+  border: 1px solid #E6E6E6;
+  flex: 1 20%;
+}
+
+.user-info {
+    flex: 0 1 50%;
+    padding-left: 5rem;
+}
+
+.user-image {
+    margin: 1rem;
+    padding-left: 9rem;
+}
+
+.addition-info {
+    text-align: center;
+    margin: auto;
+    margin-left: 19rem;
+}
+
+table ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+td {
+    /*border: 1px solid;*/
+    vertical-align: top;
+    padding: 0.5rem;
+    text-align: left;
 }
