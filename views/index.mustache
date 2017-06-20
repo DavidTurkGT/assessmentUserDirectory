@@ -9,8 +9,8 @@
       <h3>Index</h3>
       {{#users}}
       <div class="user-index" style = "border: 1px solid">
-        <img src={{avatar}} alt="">
-        <h3>{{name}}</h3>
+        <a href="#{{username}}"><img src={{avatar}} alt=""></a>
+        <a href="#{{username}}"><h3>{{name}}</h3></a>
         {{#job}}
         <p>{{job}}, {{company}}</p>
         {{/job}}
@@ -21,8 +21,42 @@
       {{/users}}
     </div>
     {{#users}}
-    <div class="user-card" id={{id}} style = "border: 1px solid red">
-      <p>{{name}}</p>
+    <div class="user-card" id={{username}} style = "border: 1px solid red">
+      <div class="user-image">
+        <img src={{avatar}} alt="">
+      </div>
+      <div class="user-info">
+        <h1>{{name}}</h1>
+        <p>
+          {{#address}}
+          {{city}}, {{country}}
+          {{/address}}
+          |
+          {{#job}}
+          {{job}}, {{company}}
+          {{/job}}
+          {{^job}}
+          <span style = "color: red">Available for hire</span>
+          {{/job}}
+        </p>
+        <p>{{email}} | {{phone}}</p>
+      </div>
+      <div class="addition-info">
+        <table>
+          {{#university}}
+          <tr>
+            <td><b>Education</b></td>
+            <td>{{university}}</td>
+          </tr>
+          {{/university}}
+          <tr>
+            <td><b>Skills</b></td>
+            <td><ul>
+              {{#skills}}<li>{{.}}</li>{{/skills}}
+            </ul></td>
+          </tr>
+        </table>
+      </div>
     </div>
     {{/users}}
   </body>
