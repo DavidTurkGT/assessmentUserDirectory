@@ -68,3 +68,13 @@ td {
     padding: 0.5rem;
     text-align: left;
 }
+
+.hidden{
+  display: none;
+}
+
+.return {
+    flex: 1 100%;
+    text-align: center;
+    color: #555;
+}
