@@ -27,7 +27,7 @@ MongoClient.connect(url, function(err, db) {
 });
 
 app.get("/",function(req, res){
-  res.send("Please visit /directory");
+  res.redirect("/directory");
 });
 
 app.get("/directory", function(req, res){
