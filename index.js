@@ -12,7 +12,7 @@ app.set("view engine", "mustache");
 app.use(express.static("public"));
 
 app.get("/",function(req, res){
-  res.send("Please visit /directory");
+  res.redirect("/directory");
 });
 
 app.get("/directory", function(req, res){
