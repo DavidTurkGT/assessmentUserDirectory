@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="index">
-      <h3>Index</h3>
+      <h3>{{#title}}{{.}}{{/title}}</h3>
       {{#users}}
       <div class="user-index" onclick="loadCard({{username}})">
         <img src={{avatar}} alt="">
